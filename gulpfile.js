@@ -29,12 +29,12 @@ var filter = require('gulp-filter'),
 
 // Картинки
 		gulp.task('images', function () {
-		  return gulp.src('app/img/**/*')
+		  return gulp.src('app/images/**/*')
 		    .pipe(imagemin({
 		      progressive: true,
 		      interlaced: true
 		    }))
-		    .pipe(gulp.dest('dist/img'));
+		    .pipe(gulp.dest('dist/images'));
 		});
 
 // Остальные файлы, такие как favicon.ico и пр.
@@ -63,7 +63,7 @@ gulp.task('sass', function () {
             config_file: 'config.rb',
             css: 'app/css',
             sass: 'app/sass',
-            image: 'app/img',
+            image: 'app/images',
             sourcemap: false
         }));
 });

@@ -1,0 +1,74 @@
+/*--------------------------------------------------------------
+Works
+--------------------------------------------------------------*/
+.works__gallery {
+  font-size: 0
+}
+.works__list {
+  padding: 0;
+  margin: 0;
+  margin-left: -13.33px;
+  list-style: none;
+  text-align: left;
+}
+.works__item {
+  display: inline-block;
+  vertical-align: top;
+  width: 240px;
+  margin-left: 13.33px;
+  position: relative;
+}
+.works__link {
+  display: block;
+  width: 240px;
+  height: 180px;
+  background-color: lightblue;
+  text-decoration: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.works__img {
+  height: 100%;
+  width: 100%;
+}
+.works__link_git {
+  display: block;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  @include prefix(border-radius, 50%);
+  width: 40px;
+  height: 40px;
+  font-size: 45px;
+  color: black;
+  padding-left: 3px;
+
+  &:hover {
+    color: green;
+  }
+}
+.works__h3 {
+  display: block;
+  cursor: pointer;
+  margin-bottom: 20px;
+  color: black;
+  font-family: "OpenSans-Bold";
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  font-size: 22px;
+  line-height: 24px;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.works__text {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 50px;
+  color: grey;
+  font-family: "OpenSans-Regular";
+  font-size: 13px;
+  line-height: 17px;
+  text-align: left;
+}

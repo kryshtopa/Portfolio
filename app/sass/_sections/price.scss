@@ -1,0 +1,90 @@
+/*--------------------------------------------------------------
+Price
+--------------------------------------------------------------*/
+.main-section_price {
+  background-color: lightgoldenrodyellow;
+}
+.price__h2 {
+  color: black;
+}
+.price__text_dis,
+.price__text {
+  padding-bottom: 25px;
+  font-size: 15px;
+  font-family: "OpenSans-Regular";
+  color: black;
+  line-height: 17px;
+  &:after {
+    content: "";
+    border-top: 3px solid white;
+    position: absolute;
+    width: 50px;
+    left: 351px;
+    top: 0;
+  }
+}
+.price__text_dis {
+  font-size: 12px;
+  color: grey;
+}
+.price__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.price__item {
+  position: relative;
+  padding-left: 350px;
+  height: 220px;
+  margin-bottom: 40px;
+  text-align: left;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.price__item_s,
+.price__item_o,
+.price__item_b {
+  &:before {
+    content: "";
+    background-image: url(../images/about/house.png);
+    background-color: white;
+    width: 304px;
+    height: 220px;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+.price__item_s {
+  &:before {
+    background-image: url(../images/works/1.png);
+  }
+}
+.price__item_o {
+  &:before {
+    background-image: url(../images/works/2.png);
+  }
+}
+.price__item_b {
+  &:before {
+    background-image: url(../images/works/3.png);
+  }
+}
+.price__h3 {
+  position: relative;
+  margin: 0;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: inline-block;
+  @include prefix(vertical-align, middle);
+  color: black;
+  font-family: "OpenSans-Regular";
+  font-size: 22px;
+  line-height: 24px;
+}
+.sprite-about {
+  display: inline-block;
+  margin-top: 5px;
+  @include prefix(vertical-align, middle);
+}

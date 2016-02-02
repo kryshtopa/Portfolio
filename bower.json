@@ -4,6 +4,17 @@
     "jquery": "~2.1.4",
     "normalize-css": "normalize.css#~3.0.3",
     "lightbox2": "~2.8.2",
-    "bPopup": "bpopup#~0.11.0"
+    "jquery-ui": "~1.11.4",
+    "bPopup": "bpopup#~0.11.0",
+    "jQuery-ui-Slider-Pips": "jquery-ui-slider-pips#~1.11.1"
+  },
+  "overrides": {
+    "jquery-ui": {
+      "main": [
+        "./themes/base/slider.css",
+        "./jquery-ui.min.js",
+        "./ui/slider.js"
+      ]
+    }
   }
 }

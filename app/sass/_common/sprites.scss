@@ -1,0 +1,99 @@
+/*--------------------------------------------------------------
+# Sprite skills
+--------------------------------------------------------------*/
+.sprite-skills {
+    background-image: url(../images/sprite-skills.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+.sprite-skills-angular-symbol {
+    width: 128px;
+    height: 128px;
+    background-position: -5px -5px;
+}
+.sprite-skills-boostrap {
+    width: 128px;
+    height: 128px;
+    background-position: -5px -143px;
+}
+.sprite-skills-css {
+    width: 128px;
+    height: 128px;
+    background-position: -5px -281px;
+}
+.sprite-skills-foundation {
+    width: 128px;
+    height: 128px;
+    background-position: -5px -419px;
+}
+.sprite-skills-github {
+    width: 128px;
+    height: 128px;
+    background-position: -5px -557px;
+}
+.sprite-skills-grunt {
+    width: 128px;
+    height: 128px;
+    background-position: -5px -695px;
+}
+.sprite-skills-html {
+    width: 128px;
+    height: 128px;
+    background-position: -5px -833px;
+}
+.sprite-skills-javascript {
+    width: 128px;
+    height: 128px;
+    background-position: -9px -971px;
+}
+.sprite-skills-jquery {
+    width: 128px;
+    height: 128px;
+    background-position: -5px -1109px;
+}
+.sprite-skills-nodejs {
+    width: 128px;
+    height: 128px;
+    background-position: -5px -1247px;
+}
+.sprite-skills-sass {
+    width: 128px;
+    height: 128px;
+    background-position: -9px -1385px;
+}
+.sprite-skills-bem {
+    width: 128px;
+    height: 128px;
+    background-position: -200px -1385px;
+    background-color: orange;
+    position: relative;
+    &:before {
+      content: "BEM";
+      position: absolute;
+      left: -6px;
+      top: 40px;
+      width: 135px;
+      height: 135px;
+      color: white;
+      font-size: 30px;
+      font-family: "OpenSans-Bold";
+    }
+}
+.sprite-skills-jade {
+    width: 128px;
+    height: 128px;
+    background-position: -200px -1385px;
+    background-color: pink;
+    position: relative;
+    &:before {
+      content: "JADE";
+      position: absolute;
+      left: -6px;
+      top: 40px;
+      width: 135px;
+      height: 135px;
+      color: white;
+      font-size: 30px;
+      font-family: "OpenSans-Bold";
+    }
+}

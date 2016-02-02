@@ -1,0 +1,155 @@
+/*--------------------------------------------------------------
+Contacts
+--------------------------------------------------------------*/
+.main-section_contacts {
+  @include clearfix;
+
+  .main-section__aside {
+    text-align: right;
+  }
+  .main-section__content {
+    text-align: left;
+  }
+}
+.contacts__content {
+  float: left;
+  width: 270px;
+  font-style: normal;
+}
+.contacts__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.contacts__item {
+  margin-bottom: 18px;
+}
+.contacts__text {
+  padding: 0;
+  margin: 0;
+}
+.contacts__phone {
+  display: block;
+}
+.contacts__skype,
+.contacts__text,
+.contacts__phone,
+.contacts__mail {
+  color: grey;
+  font-family: "OpenSans-Regular";
+  font-size: 15px;
+  line-height: 17px;
+  text-decoration: none;
+}
+.contacts__phone,
+.contacts__skype,
+.contacts__mail {
+  cursor: pointer;
+}
+.contacts__social {
+  width: 180px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+
+  .social__item {
+    background-color: green;
+    height: 50px;
+    width: 50px;
+    &:hover {
+      background-color: lightblue;
+    }
+  }
+  .social__link {
+    &:before {
+      color: white;
+    }
+  }
+  .social__link_facebook {
+    &:before {
+      left: 18px;
+      top: 15px;
+    }
+  }
+  .social__link_linkedIn {
+    &:before {
+      left: 15px;
+      top: 11px;
+    }
+  }
+  .social__link_github {
+    &:before {
+      left: 14px;
+      top: 13px;
+    }
+  }
+}
+.contacts__contact-form {
+  float: right;
+  width: 666px;
+}
+.contacts__h3,
+.contact-form__h3 {
+  padding: 0;
+  padding-bottom: 25px;
+  margin: 0;
+  color: black;
+  font-family: "OpenSans-Semibold";
+  text-transform: uppercase;
+  font-size: 22px;
+  line-height: 24px;
+}
+.contacts__h3 {
+  padding-bottom: 5px;
+}
+.contact-form__button {
+  display: inline-block;
+}
+.contact-form__button {
+  background-color: green;
+  color: white;
+  width: 180px;
+  height: 50px;
+  padding: 15px 20px;
+  margin-right: 25px;
+  cursor: pointer;
+  border: none;
+  @include prefix(border-radius, 4px);
+
+  font-family: "OpenSans-Bold";
+  font-size: 15px;
+  line-height: 17px;
+  text-transform: uppercase;
+  text-align: center;
+
+  &:hover {
+    font-size: 16px;
+  }
+}
+
+.contact-form__input,
+.contact-form__text {
+  color: grey;
+  font-family: "OpenSans-Regular";
+  font-size: 15px;
+  line-height: 17px;
+}
+.contact-form__input,
+.contact-form__text {
+  @include prefix (border, 1px solid rgb(216, 216, 216));
+  @include prefix (border-radius, 2px);
+  margin-bottom: 15px;
+  padding: 13px;
+  outline-color: lightblue;
+}
+.contact-form__input {
+  width: 325px;
+  height: 35px;
+}
+.contact-form__input_name {
+  margin-right: 11px;
+}
+.contact-form__text {
+  width: 666px;
+  height: 119px;
+  resize: none;
+}

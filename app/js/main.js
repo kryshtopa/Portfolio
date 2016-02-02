@@ -1,16 +1,28 @@
-// Модальное окно формы обратной связи
+// Runs scripts
+$(document).ready(function(){
+
+  console.log("Hi! If yoy're interested in code, you can take a look at thit site's repository on github https://github.com/kryshtopa/Portfolio.git");
+
+  contactForm.init();
+  lightbox.init();
+  colorSwitch.init();
+  fontSlider.init();
+  stickyNavBar.init();
+
+});
+
+
+// Popup window of contact form
 var contactForm = (function () {
 
   var init = function () {
     _setUpListners();
   };
 
-  // Прослушка событий
   var _setUpListners = function () {
     $('.slide-in__content_message').on('click', _showModal);
   };
 
-  // Работает с модальным окном
   var _showModal = function (event) {
     event.preventDefault();
 
@@ -34,15 +46,15 @@ var contactForm = (function () {
 })();
 
 
-// Лайтбокс
+// Lightbox
 var lightbox = (function() {
 
   var init = function () {
-    $('.photoPopLink').on('click', function(e){
+    $('.works__link').on('click', function(e){
       e.preventDefault();
 
-      var container = $(this).closest('.photoPopItem'),
-          image = container.find('.photoPopImg'),
+      var container = $(this).closest('.works__item'),
+          image = container.find('.works__img'),
           src = image.attr('src');
 
       $(this).attr('href', src);
@@ -57,23 +69,30 @@ var lightbox = (function() {
 }());
 
 
-// Изменение размеров картинок на главной странице
-var imageSize = (function() {
-
+// Font size change with slider
+var fontSlider = (function() {
   var init = function () {
-    var image = $('.photo-gallery__link'),
-        windowWidth = $(window).width()
-        imageSize = imageSize;
-
-    if (windowWidth > 1250 ) {
-      imageSize = windowWidth/6 + "px";
-    } else {
-      imageSize = "208px";
-    }
-
-    image.css({"width": imageSize, "height": imageSize });
-
-  };
+    $("#slider")
+        .slider({
+          max: 2,
+          min: -2,
+          value: 0,
+          slide: function( event, ui ) {
+            $(".p__slider").html("<p>" + ui.value + "</p>");
+            $(".greeting__h1").css("font-size", 60 + ui.value*2 );
+            $(".greeting__h2").css("font-size", 25 +ui.value*2 );
+            $(".index__h2").css("font-size", 40 +ui.value*2 );
+            $(".about__text").css("font-size", 15 +ui.value );
+            $(".price__text").css("font-size", 15 +ui.value );
+            $(".works__text").css("font-size", 13 +ui.value );
+            $(".index__text").css("font-size", 15 +ui.value );
+          }
+        })
+        .slider("pips", {
+          first: "pip",
+          last: "pip"
+        });
+  }
 
   return {
     init : init
@@ -82,25 +101,33 @@ var imageSize = (function() {
 }());
 
 
-// Динамическое изменение размеров картинок на главной странице
-var imageResize = (function() {
+// Colors switch
+var colorSwitch = (function() {
 
   var init = function () {
-    $(window).resize(function(){
-      var image = $('.photo-gallery__link'),
-          windowWidth = $(window).width()
-          imageSize = imageSize;
+    _setUpListners();
+  };
 
-      if (windowWidth > 1250 ) {
-        imageSize = windowWidth/6 + "px";
-        $('.photo-gallery__list').css({"margin-left": ""});
-      } else {
-        imageSize = "208px";
+  var _setUpListners = function () {
+    $('.color-switch__item').on('click', _colors);
+  };
+
+  var _colors = function () {
+    var color = $(this).css("background-color");
+
+    $('.site-header').css("background-color", color);
+    $('.slide-in').hover(
+      function() {
+        $(this).css("background-color","green")
+      },
+      function() {
+        $(this).css("background-color", color)
       }
-
-      image.css({"width": imageSize, "height": imageSize });
-    });
-  };
+    );
+    $('.slide-in').css("background-color", color);
+    $('.slide-in__content_colors').css("color", color);
+    $('.site-footer').css("background-color", color);
+  }
 
   return {
     init : init
@@ -109,53 +136,31 @@ var imageResize = (function() {
 }());
 
 
-// Яндекс Карта
-function init(){
+// Sticky navigation bar
+var stickyNavBar = (function() {
 
-  myMap = new ymaps.Map("howToGetMap", {
-      center: [51.402412, 86.030271],
-      zoom: 14
-  });
+  var init = function () {
+    var stickyNavTop = $('.site-header__navigation').offset().top;
 
-  myPlacemark = new ymaps.Placemark([55.76, 37.64], {
-      hintContent: 'Москва!',
-      balloonContent: 'Столица России'
-  });
+    var stickyNav = function(){
+    var scrollTop = $(window).scrollTop();
 
-  myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-          hintContent: 'Малиновый Остров',
-          balloonContent: 'Чемал'
-      }, {
-          iconLayout: 'default#image',
-          // Своё изображение иконки метки.
-          iconImageHref: 'images/icons/map-tag.png',
-          // Размеры метки.
-          iconImageSize: [45, 61],
-          // Смещение левого верхнего угла иконки относительно
-          // её "ножки" (точки привязки).
-          iconImageOffset: [-3, -42]
-      });
+    if (scrollTop > stickyNavTop) {
+        $('.site-header__navigation').addClass('sticky');
+        $('.slide-in_message').css({"top": "88px"});
+    } else {
+        $('.site-header__navigation').removeClass('sticky');
+        $('.slide-in_message').css({"top": "25px"})
+    }
+    };
 
-  myMap.geoObjects.add(myPlacemark);
-  myMap.behaviors.disable('scrollZoom');
-}
-
-// Запускает скрипты
-$(document).ready(function(){
-
-  contactForm.init();
-  lightbox.init();
-
-  // Проверяет необходимость запуска скриптов изменения размеров картинок
-  if($('.photo-gallery__link')[0]) {
-    imageSize.init();
-    imageResize.init();
+    $(window).scroll(function() {
+      stickyNav();
+    });
   }
 
-  // Проверяет необходимость запуска карты
-  if($('#howToGetMap')[0]) {
-    ymaps.ready(init);
-    var myMap,
-    myPlacemark;
-  }
-});
+  return {
+    init : init
+  };
+
+}());

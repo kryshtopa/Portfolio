@@ -50,14 +50,14 @@
   </head>
 </html>
 <body>
-  <div class="wrapper"><a name="home"></a>
-    <header class="site-header">
+  <div class="wrapper">
+    <header id="home" class="site-header">
       <div class="container">
         <div class="site-header__social">
           <ul class="social__list">
-            <li class="social__item"><a href="http://" target="_blank" class="social__link social__link_facebook">facebook</a></li>
-            <li class="social__item"><a href="http://" target="_blank" class="social__link social__link_linkedIn">linkedIn</a></li>
-            <li class="social__item"><a href="http://" target="_blank" class="social__link social__link_github">github</a></li>
+            <li class="social__item"><a href="http://facebook.com/kryshtopa/" target="_blank" class="social__link social__link_facebook">facebook</a></li>
+            <li class="social__item"><a href="#" target="_blank" class="social__link social__link_linkedIn">linkedIn</a></li>
+            <li class="social__item"><a href="https://github.com/kryshtopa/" target="_blank" class="social__link social__link_github">github</a></li>
           </ul>
         </div>
         <div class="site-header__logo"><img src="images/logo.png" alt="Dmitry Kryshtopa logo" class="logo_img"/></div>
@@ -78,7 +78,8 @@
           <li class="navigation__item"><a href="#contacts" class="navigation__link">Contacts</a></li>
         </div>
       </ul>
-    </nav><a name="about">     </a>
+    </nav>
+    <div id="about"></div>
     <section class="main-section main-section_about">
       <div class="container">
         <div class="main-section__aside">
@@ -92,7 +93,8 @@
           <p class="about__text">Examples of my work can be seen below. If you are looking for a responsible and competent performer, you can fully rely on me. I would be happy to work with you on any challenge.</p>
         </div>
       </div>
-    </section><a name="skills"></a>
+    </section>
+    <div id="skills"></div>
     <section class="main-section main-section_skills">
       <div class="container">
         <div class="skills__container">
@@ -126,6 +128,7 @@
         <div class="skills__copyright">Icons by <a href="http://jozefkrajcovic.sk" target="_blank" class="skills__copyright_link">Jozef Krajcovic</a></div>
       </div>
     </section>
+    <div id="works"></div>
     <section class="main-section main-section_works">
       <div class="container">
         <h2 class="index__h2 works__h2">Selected Works</h2>
@@ -148,6 +151,7 @@
         </div>
       </div>
     </section>
+    <div id="price">         </div>
     <section class="main-section main-section_price">
       <div class="container">
         <h2 class="index__h2 price__h2">Pricing</h2>
@@ -170,22 +174,23 @@
         </ul>
       </div>
     </section>
+    <div id="contacts"> </div>
     <section class="main-section main-section_contacts">
       <div class="container">
         <h2 class="index__h2 how-to-get__h2">Contacts</h2>
         <p class="index__text">Please feel free to contact me on any ocasion. I'll try to answer your question as soon as possible. Contact form, that you can see below, sends e-mails to the same address that is shown in E-Mail field, so if you don't need to attach any file to your letter, that could be the most convinient way for you.</p>
         <div class="site-header__social contacts__social">
           <ul class="social__list">
-            <li class="social__item"><a href="http://" target="_blank" class="social__link social__link_facebook">facebook</a></li>
-            <li class="social__item"><a href="http://" target="_blank" class="social__link social__link_linkedIn">linkedIn</a></li>
-            <li class="social__item"><a href="http://" target="_blank" class="social__link social__link_github">github</a></li>
+            <li class="social__item"><a href="http://facebook.com/kryshtopa/" target="_blank" class="social__link social__link_facebook">facebook</a></li>
+            <li class="social__item"><a href="#" target="_blank" class="social__link social__link_linkedIn">linkedIn</a></li>
+            <li class="social__item"><a href="https://github.com/kryshtopa/" target="_blank" class="social__link social__link_github">github</a></li>
           </ul>
         </div>
         <div class="main-section__aside">
           <address class="contacts__content">
             <ul class="contacts__list">
               <li class="contacts__item">
-                <h3 class="contacts__h3">Phone</h3><a href="tel:+38269" class="contacts__phone">+382-69-</a>
+                <h3 class="contacts__h3">Phone</h3><a href="tel:+38269" class="contacts__phone">+382-69-679550</a>
               </li>
               <li class="contacts__item">
                 <h3 class="contacts__h3">Viber</h3><a href="viber://tel:+380967895929" class="contacts__phone">+380-96-7895929</a>
@@ -200,25 +205,27 @@
           </address>
         </div>
         <div class="main-section__content">
-          <div class="contacts__contact-form">
+          <div id="contact-form" class="contacts__contact-form">
             <h3 class="contact-form__h3">Write me a message</h3>
-            <form class="contact-form">
-              <input id="from" name="nameFF" x-autocompletetype="name" placeholder="Your name" class="contact-form__input contact-form__input_name"/>
-              <input id="subject" name="contactFF" x-autocompletetype="email" placeholder="Your E-Mail" class="contact-form__input contact-form__input_phone"/>
-              <textarea id="content" name="messageFF" placeholder="Your message" class="contact-form__text"></textarea>
+            <form id="form" class="contact-form">
+              <input id="from" x-autocompletetype="name" placeholder="Your name" class="contact-form__input contact-form__input_name"/>
+              <input id="email" x-autocompletetype="email" placeholder="Your E-Mail" class="contact-form__input contact-form__input_phone"/>
+              <textarea id="content" placeholder="Your message" class="contact-form__text"></textarea>
               <button id="send" type="submit" class="contact-form__button">Send</button>
+              <div id="alert" class="contact-form__alert"></div>
             </form>
           </div>
         </div>
       </div>
     </section>
-    <div class="contacts__contact-form contacts__contact-form_popup">
+    <div id="contact-form" class="contacts__contact-form contacts__contact-form_popup">
       <h3 class="contact-form__h3">Write me a message</h3>
-      <form class="contact-form">
-        <input id="from" name="nameFF" x-autocompletetype="name" placeholder="Your name" class="contact-form__input contact-form__input_name"/>
-        <input id="subject" name="contactFF" x-autocompletetype="email" placeholder="Your E-Mail" class="contact-form__input contact-form__input_phone"/>
-        <textarea id="content" name="messageFF" placeholder="Your message" class="contact-form__text"></textarea>
-        <button id="send" type="submit" class="contact-form__button">Send</button>
+      <form id="form" class="contact-form">
+        <input id="from2" x-autocompletetype="name" placeholder="Your name" class="contact-form__input contact-form__input_name"/>
+        <input id="email2" x-autocompletetype="email" placeholder="Your E-Mail" class="contact-form__input contact-form__input_phone"/>
+        <textarea id="content2" placeholder="Your message" class="contact-form__text"></textarea>
+        <button id="send2" type="submit" class="contact-form__button">Send</button>
+        <div id="alert2" class="contact-form__alert"></div>
       </form>
     </div>
     <div class="slide-in slide-in_message"><a class="slide-in__content slide-in__content_message">send me a message</a></div>

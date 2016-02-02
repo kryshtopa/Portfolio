@@ -8,6 +8,7 @@ $(document).ready(function(){
   colorSwitch.init();
   fontSlider.init();
   stickyNavBar.init();
+  gentleNav.init();
 
 });
 
@@ -156,6 +157,30 @@ var stickyNavBar = (function() {
 
     $(window).scroll(function() {
       stickyNav();
+    });
+  }
+
+  return {
+    init : init
+  };
+
+}());
+
+
+// Плавная навигация
+var gentleNav = (function() {
+
+  var init = function () {
+    $('a[href*=#]').bind('click', function(e) {
+      e.preventDefault();
+
+      var target = $(this).attr("href");
+
+      $('html, body').stop().animate({ scrollTop: $(target).offset().top-60}, 700, function() {
+        location.hash = target;
+      });
+
+      return false;
     });
   }
 

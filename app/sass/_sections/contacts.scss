@@ -126,12 +126,17 @@ Contacts
   }
 }
 
+.contact-form__alert,
 .contact-form__input,
 .contact-form__text {
   color: grey;
   font-family: "OpenSans-Regular";
   font-size: 15px;
   line-height: 17px;
+}
+.contact-form__alert {
+  display: none;
+  color: red;
 }
 .contact-form__input,
 .contact-form__text {

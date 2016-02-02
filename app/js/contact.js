@@ -1,21 +1,66 @@
-// document
-//   .getElementByClass('.contact-form')
-//   .addEventListener('submit', function(evt){
-//     var http = new XMLHttpRequest(),
-//         f = this;
-//
-//     evt.preventDefault();
-//     http.open("POST", "php/contact.php", true);
-//     http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-//     http.send("nameFF=" + f.nameFF.value + "&contactFF=" + f.contactFF.value + "&messageFF=" + f.messageFF.value);
-//     http.onreadystatechange = function() {
-//       if (http.readyState == 4 && http.status == 200) {
-//         alert(http.responseText + ', Ваше сообщение получено.\nНаши специалисты ответят Вам в течении 2-х дней.\nБлагодарим за интерес к нашей фирме!');
-//         f.messageFF.removeAttribute('value'); // очистить поле сообщения (две строки)
-//         f.messageFF.value='';
-//       }
-//     }
-//     http.onerror = function() {
-//       alert('Извините, данные не были переданы');
-//     }
-//   }, false);
+$(document).ready(function() {
+  //First form
+  $("#send").click(function() {
+    var name = $("#from").val();
+    var email = $("#email").val();
+    var message = $("#content").val();
+
+    // Checking for blank fields.
+    if (name == '' || email == '' || message == '') {
+      $("#alert")
+        .show()
+        .html("All fields required")
+        .css({"display": "inline-block"});
+    } else {
+      $.post("php/contact.php", {
+        name1: name,
+        email1: email,
+        message1: message
+      });
+      $("#alert")
+        .show()
+        .html("Your message was successfully sent")
+        .css({"display": "inline-block", "color": "green"});
+      $("#form").trigger("reset");
+    }
+  });
+
+  // Second form (popping)
+  $("#send2").click(function() {
+    var name = $("#from2").val();
+    var email = $("#email2").val();
+    var message = $("#content2").val();
+
+    // Checking for blank fields.
+    if (name == '' || email == '' || message == '') {
+      $("#alert2")
+        .show()
+        .html("All fields required")
+        .css({"display": "inline-block"});
+    } else {
+      $.post("php/contact.php", {
+        name1: name,
+        email1: email,
+        message1: message
+      });
+      $("#alert2")
+        .show()
+        .html("Your message was successfully sent")
+        .css({"color": "green"});
+      $('.contacts__contact-form_popup')
+        .bPopup()
+        .close();
+      $("#alert2")
+        .html("Your message was successfully sent")
+        .css({"color": "green", "background-color": "white", "padding": "25px"})
+        .bPopup({
+          speed: 300,
+          transition: 'slideIn',
+          transitionClose: 'slideBack',
+          onClose: function () {
+            form.trigger("reset");
+          }
+        });
+    }
+  });
+});

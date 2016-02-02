@@ -53,12 +53,11 @@ html(lang="RU-ru")
     
 body
   .wrapper
-    a(name="home")
-    header.site-header
+    header.site-header#home
       .container
         .site-header__social
           ul.social__list
-            each val, index in {facebook: "http://", "linkedIn": "http://", "github": "http://"}
+            each val, index in {facebook: "http://facebook.com/kryshtopa/", "linkedIn": "#", "github": "https://github.com/kryshtopa/"}
               li.social__item
                 a.social__link(href="" + val class="social__link_" + index target="_blank")= index
         .site-header__logo
@@ -73,7 +72,7 @@ body
             li.navigation__item
               a.navigation__link(href='#' + index)= val
     
-    a(name="about")      
+    #about
     section.main-section.main-section_about
       .container
         .main-section__aside
@@ -86,10 +85,9 @@ body
           p.about__text By education I am a doctor, psychiatrist. It has nothing to do with my current kind of activity, but this information may be useful to you to understand my ability to learn, and my desire to engage in web development (it made me give up the case, for studying of which I’ve spent long eight years)
           p.about__text Examples of my work can be seen below. If you are looking for a responsible and competent performer, you can fully rely on me. I would be happy to work with you on any challenge.
 
-    a(name="skills")
+    #skills
     section.main-section.main-section_skills
       .container
-        //- h2.index__h2.skills__h2 Skills
         .skills__container
           ul.skills__list
             each val, index in {"html5": "", "css3": "", "bem": "", "javascript": "", "jquery": "", "sass": "", "jade": "", "git": ""}
@@ -98,7 +96,7 @@ body
         .skills__copyright Icons by 
           a.skills__copyright_link(href="http://jozefkrajcovic.sk" target="_blank") Jozef Krajcovic
 
-
+    #works
     section.main-section.main-section_works
       .container
         h2.index__h2.works__h2 Selected Works
@@ -128,7 +126,8 @@ body
                 img.works__img(src="images/preview/1.png")
               a.works__h3(href="http://hw1.kryshtopa.com/" target="_blank") Personal Site
               p.works__text It looks simple, but performs all the necessary tasks. Strong layout and required JS. There is a form validation, popups, and 4 pages... What else may you need for a small personal site?
-                
+      
+    #price          
     section.main-section.main-section_price
       .container
         h2.index__h2.price__h2 Pricing
@@ -145,19 +144,15 @@ body
             h3.price__h3 Business - 299$
             .price__text A site with multiple pages with a different layout and functions. Adding the required functionality through JS. Term - one week.
             .price__text_dis Approximate price. It may vary depending on your specific wishes. Write me and we will discuss all the details.
-                              
-    //- section.main-section.main-section_brief
-    //-   .container
-    //-     h2.index__h2.brief__h2 Brief
-    //-     p.index__text.brief__text     
-              
+          
+    #contacts  
     section.main-section.main-section_contacts
       .container
         h2.index__h2.how-to-get__h2 Contacts
         p.index__text Please feel free to contact me on any ocasion. I'll try to answer your question as soon as possible. Contact form, that you can see below, sends e-mails to the same address that is shown in E-Mail field, so if you don't need to attach any file to your letter, that could be the most convinient way for you.
         .site-header__social.contacts__social
           ul.social__list
-            each val, index in {facebook: "http://", "linkedIn": "http://", "github": "http://"}
+            each val, index in {facebook: "http://facebook.com/kryshtopa/", "linkedIn": "#", "github": "https://github.com/kryshtopa/"}
               li.social__item
                 a.social__link(href="" + val class="social__link_" + index target="_blank")= index
         .main-section__aside
@@ -165,7 +160,7 @@ body
             ul.contacts__list
               li.contacts__item
                 h3.contacts__h3 Phone
-                a.contacts__phone(href="tel:+38269") +382-69-
+                a.contacts__phone(href="tel:+38269") +382-69-679550
               li.contacts__item
                 h3.contacts__h3 Viber
                 a.contacts__phone(href="viber://tel:+380967895929") +380-96-7895929
@@ -176,21 +171,23 @@ body
                 h3.contacts__h3 E-mail
                 a.contacts__mail(href="mailto:mail@kryshtopa") mail@kryshtopa.com
         .main-section__content
-          .contacts__contact-form
+          .contacts__contact-form#contact-form
             h3.contact-form__h3 Write me a message
-            form.contact-form
-              input#from.contact-form__input.contact-form__input_name(name="nameFF" x-autocompletetype="name" placeholder="Your name")
-              input#subject.contact-form__input.contact-form__input_phone(name="contactFF" x-autocompletetype="email" placeholder="Your E-Mail")
-              textarea#content.contact-form__text(name="messageFF" placeholder="Your message")
+            form.contact-form#form
+              input#from.contact-form__input.contact-form__input_name(x-autocompletetype="name" placeholder="Your name")
+              input#email.contact-form__input.contact-form__input_phone(x-autocompletetype="email" placeholder="Your E-Mail")
+              textarea#content.contact-form__text(placeholder="Your message")
               button#send.contact-form__button(type="submit") Send
+              .contact-form__alert#alert
         
-    .contacts__contact-form.contacts__contact-form_popup
+    .contacts__contact-form.contacts__contact-form_popup#contact-form
       h3.contact-form__h3 Write me a message
-      form.contact-form
-        input#from.contact-form__input.contact-form__input_name(name="nameFF" x-autocompletetype="name" placeholder="Your name")
-        input#subject.contact-form__input.contact-form__input_phone(name="contactFF" x-autocompletetype="email" placeholder="Your E-Mail")
-        textarea#content.contact-form__text(name="messageFF" placeholder="Your message")
-        button#send.contact-form__button(type="submit") Send
+      form.contact-form#form
+        input#from2.contact-form__input.contact-form__input_name(x-autocompletetype="name" placeholder="Your name")
+        input#email2.contact-form__input.contact-form__input_phone(x-autocompletetype="email" placeholder="Your E-Mail")
+        textarea#content2.contact-form__text(placeholder="Your message")
+        button#send2.contact-form__button(type="submit") Send
+        .contact-form__alert#alert2
     
     .slide-in.slide-in_message
       a.slide-in__content.slide-in__content_message send me a message

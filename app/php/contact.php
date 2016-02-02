@@ -1,13 +1,12 @@
-<?
-if (array_key_exists('messageFF', $_POST)) {
-   $to = 'followthewhite@yandex.ru';
-   $subject = 'Заполнена контактная форма с '.$_SERVER['HTTP_REFERER'];
-   $subject = "=?utf-8?b?". base64_encode($subject) ."?=";
-   $message = "Имя: ".$_POST['nameFF']."\nEmail: ".$_POST['contactFF']."\nСообщение: ".$_POST['messageFF'];
-   $headers = 'Content-type: text/plain; charset="utf-8"';
-   $headers .= "MIME-Version: 1.0\r\n";
-   $headers .= "Date: ". date('D, d M Y h:i:s O') ."\r\n";
-   mail($to, $subject, $message, $headers);
-   echo $_POST['nameFF'];
-}
+<?php
+$name = $_POST['name1'];
+$email = $_POST['email1'];
+$message = $_POST['message1'];
+
+$subject = $name;
+$headers = 'MIME-Version: 1.0' . "\r\n";
+$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+$headers .= 'From:' . $email. "\r\n";
+
+mail("followthewhite@yandex.ru", $subject, $message, $headers);
 ?>

@@ -36,15 +36,19 @@ Works
   position: absolute;
   left: 10px;
   top: 10px;
-  @include prefix(border-radius, 50%);
-  width: 40px;
-  height: 40px;
-  font-size: 45px;
-  color: black;
   padding-left: 3px;
-
+  text-decoration: none;
+  cursor: alias;
+  &:before {
+    content:"\f092";
+    font-family: FontAwesome;
+    font-size: 45px;
+    color: black;
+  }
   &:hover {
-    color: green;
+    &:before {
+      color: green;
+    }
   }
 }
 .works__h3 {

@@ -821,18 +821,17 @@ Works
   position: absolute;
   left: 10px;
   top: 10px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  padding-left: 3px;
+  text-decoration: none;
+  cursor: alias;
+}
+.works__link_git:before {
+  content: "\f092";
+  font-family: FontAwesome;
   font-size: 45px;
   color: black;
-  padding-left: 3px;
 }
-.works__link_git:hover {
+.works__link_git:hover:before {
   color: green;
 }
 

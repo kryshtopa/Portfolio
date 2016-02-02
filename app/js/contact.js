@@ -1,6 +1,8 @@
 $(document).ready(function() {
   //First form
-  $("#send").click(function() {
+  $("#send").click(function(e) {
+    e.preventDefault();
+
     var name = $("#from").val();
     var email = $("#email").val();
     var message = $("#content").val();
@@ -10,7 +12,7 @@ $(document).ready(function() {
       $("#alert")
         .show()
         .html("All fields required")
-        .css({"display": "inline-block"});
+        .css({"display": "inline-block", "color": "red"});
     } else {
       $.post("php/contact.php", {
         name1: name,
@@ -26,7 +28,9 @@ $(document).ready(function() {
   });
 
   // Second form (popping)
-  $("#send2").click(function() {
+  $("#send2").click(function(e) {
+    e.preventDefault();
+
     var name = $("#from2").val();
     var email = $("#email2").val();
     var message = $("#content2").val();
@@ -36,7 +40,7 @@ $(document).ready(function() {
       $("#alert2")
         .show()
         .html("All fields required")
-        .css({"display": "inline-block"});
+        .css({"display": "inline-block", "color": "red"});
     } else {
       $.post("php/contact.php", {
         name1: name,

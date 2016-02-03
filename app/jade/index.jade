@@ -54,7 +54,7 @@ html(lang="RU-ru")
 body
   .wrapper
     header.site-header#home
-      .container
+      .container.container_header
         .site-header__social
           ul.social__list
             each val, index in {facebook: "http://facebook.com/kryshtopa/", "linkedIn": "#", "github": "https://github.com/kryshtopa/"}
@@ -158,10 +158,10 @@ body
             ul.contacts__list
               li.contacts__item
                 h3.contacts__h3 Phone
-                a.contacts__phone(href="tel:+38269") +382-69-679550
+                a.contacts__phone(href="tel:+38269679550") +382-69-679550
               li.contacts__item
                 h3.contacts__h3 Viber
-                a.contacts__phone(href="viber://tel:+380967895929") +380-96-7895929
+                a.contacts__phone(href="viber:+380967895929") +380-96-7895929
               li.contacts__item
                 h3.contacts__h3 Skype
                 a.contacts__skype(href="skype:krysht0pa") krysht0pa

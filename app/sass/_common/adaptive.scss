@@ -1,0 +1,174 @@
+@import "_common/mixins.scss";
+
+@media screen and (max-device-width : 999px) {
+
+  /* --------- general --------- */
+
+  html,body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    -webkit-overflow-scrolling: touch;
+  }
+  .wrapper {
+    min-width: 100%;
+  }
+  .wrapper {
+    min-height: auto;
+    margin-bottom: 0;
+    &:after {
+      height: 0;
+    }
+  }
+  .container {
+    width: 90%;
+  }
+  .slide-in {
+    display: none;
+  }
+  .index__h2 {
+    padding: 30px 0;
+    font-size: 2em;
+    letter-spacing: 0.2em;
+  }
+  .main-section {
+    text-align: center;
+    padding-bottom: 30px;
+  }
+
+  /* --------- header --------- */
+
+  .container_header {
+    @include absolute-center;
+    padding-top: 3em;
+  }
+  .site-header__social {
+    margin: 0 auto 20px;
+  }
+  .site-header__logo {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto .5em;
+  }
+  .site-header__greeting {
+    width: 85%;
+    padding-bottom: 2em;
+  }
+  .greeting__h1 {
+    font-size: 2em;
+    padding-bottom: .5em;
+  }
+  .greeting__h2 {
+    font-size: 1em;
+  }
+
+  /* --------- navigation --------- */
+
+  .site-header__navigation {
+    display: none;
+  }
+
+  /* --------- about --------- */
+
+  .main-section__content,
+  .main-section__aside {
+    width: 100%;
+  }
+  .about__avatar {
+    margin-left: 0;
+    margin-top: 0;
+    margin: 10% auto;
+  }
+  .about__h2 {
+    padding-top: 0;
+  }
+  .about__text {
+    width: 95%;
+    margin: 0 auto;
+    margin-bottom: 1em;
+  }
+
+  /* --------- skills --------- */
+
+  .main-section_skills {
+    padding-top: 30px;
+  }
+  .skills__container {
+    height: 152px;
+    margin-bottom: -32px;
+    overflow-x: scroll;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    -webkit-overflow-scrolling: touch;
+  }
+  .skills__list {
+    -webkit-overflow-scrolling: touch;
+    animation: none;
+    width: 1450px;
+  }
+  .skills__item {
+    width: 165px;
+  }
+
+  /* --------- works --------- */
+
+  .works__item {
+    width: 100%;
+  }
+  .works__link {
+    margin: 0 auto 20px;
+  }
+  .works__link_git {
+    top: 0;
+    left: 0;
+  }
+
+  /* --------- price --------- */
+
+  .price__item {
+    padding-left: 0;
+    &:before {
+      content: none;
+    }
+  }
+  .price__h3 {
+    text-align: center;
+    width: 100%;
+  }
+  .price__text {
+    &:after {
+      width: 100%;
+      left: 0;
+    }
+  }
+  /* --------- contacts --------- */
+
+  .index__text {
+    padding: 0;
+  }
+  .contacts__list {
+    text-align: center;
+  }
+  .contact-form__h3 {
+    text-align: center;
+    padding-top: 40px;
+  }
+  .contacts__content,
+  .contact-form__input,
+  .contact-form__text,
+  .contact-form__button,
+  .contacts__contact-form {
+    width: 100%;
+  }
+  .contact-form__alert {
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  /* --------- footer --------- */
+
+  .site-footer {
+    display: none;
+  }
+
+}

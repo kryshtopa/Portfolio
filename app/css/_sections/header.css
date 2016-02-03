@@ -1,79 +1,226 @@
-/*
-Error: Undefined mixin 'prefix'.
-        on line 33 of C:/openserver/domains/localhost/Portfolio/app/sass/_sections/header.scss, in `prefix'
-        from line 33 of C:/openserver/domains/localhost/Portfolio/app/sass/_sections/header.scss
+/*--------------------------------------------------------------
+Header
+--------------------------------------------------------------*/
+.site-header {
+  color: white;
+  padding-top: 25px;
+  background-color: lightblue;
+  margin: 0;
+  min-height: 100%;
+  position: relative;
+}
 
-28:   height: 55px;
-29:   width: 55px;
-30:   white-space: nowrap;
-31:   overflow: hidden;
-32:   background-color: white;
-33:   @include prefix(border-radius, 50%);
-34: 
-35:   &:first-child {
-36:     margin-left: 0;
-37:   }
-38:   &:hover {
+.site-header__content {
+  width: 100%;
+  float: none;
+  min-height: 100%;
+}
 
-Backtrace:
-C:/openserver/domains/localhost/Portfolio/app/sass/_sections/header.scss:33:in `prefix'
-C:/openserver/domains/localhost/Portfolio/app/sass/_sections/header.scss:33
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:349:in `block in visit_mixin'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.20/lib/sass/stack.rb:98:in `block in with_mixin'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.20/lib/sass/stack.rb:115:in `with_frame'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.20/lib/sass/stack.rb:98:in `with_mixin'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:347:in `visit_mixin'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.20/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.20/lib/sass/stack.rb:79:in `block in with_base'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.20/lib/sass/stack.rb:115:in `with_frame'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.20/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:158:in `visit'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:431:in `block (2 levels) in visit_rule'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:431:in `map'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:431:in `block in visit_rule'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:429:in `visit_rule'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.20/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.20/lib/sass/stack.rb:79:in `block in with_base'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.20/lib/sass/stack.rb:115:in `with_frame'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.20/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:158:in `visit'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.20/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.20/lib/sass/tree/visitors/base.rb:52:in `map'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.20/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.20/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.20/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:157:in `visit'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:8:in `visit'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.20/lib/sass/tree/root_node.rb:36:in `css_tree'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.20/lib/sass/tree/root_node.rb:20:in `render'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.20/lib/sass/engine.rb:278:in `render'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:17:in `block in render'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:29:in `with_import_scope'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:16:in `render'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.20/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.20/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.20/lib/sass/plugin/compiler.rb:209:in `each'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.20/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/compass-1.0.3/lib/compass/sass_compiler.rb:40:in `compile!'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/compass-1.0.3/lib/compass/commands/update_project.rb:49:in `perform'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/compass-1.0.3/lib/compass/commands/base.rb:18:in `execute'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/compass-1.0.3/lib/compass/commands/project_base.rb:19:in `execute'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:15:in `run!'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/compass-1.0.3/bin/compass:30:in `block in <top (required)>'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/compass-1.0.3/bin/compass:44:in `call'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/compass-1.0.3/bin/compass:44:in `<top (required)>'
-C:/Ruby21/bin/compass:23:in `load'
-C:/Ruby21/bin/compass:23:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Undefined mixin 'prefix'.\A         on line 33 of C:/openserver/domains/localhost/Portfolio/app/sass/_sections/header.scss, in `prefix'\A         from line 33 of C:/openserver/domains/localhost/Portfolio/app/sass/_sections/header.scss\A \A 28:   height: 55px;\A 29:   width: 55px;\A 30:   white-space: nowrap;\A 31:   overflow: hidden;\A 32:   background-color: white;\A 33:   @include prefix(border-radius, 50%);\A 34: \A 35:   &:first-child {\A 36:     margin-left: 0;\A 37:   }\A 38:   &:hover {"; }
+.site-header__social {
+  width: 195px;
+  margin: 0 auto 50px;
+  font-size: 0;
+}
+
+.social__list {
+  padding: 0;
+  margin: 0;
+}
+
+.social__item {
+  display: inline-block;
+  margin-left: 15px;
+  height: 55px;
+  width: 55px;
+  white-space: nowrap;
+  overflow: hidden;
+  background-color: white;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+}
+.social__item:first-child {
+  margin-left: 0;
+}
+.social__item:hover {
+  background-color: green;
+}
+
+.social__link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  text-decoration: none;
+}
+.social__link:before {
+  color: lightgrey;
+  font-family: FontAwesome;
+  font-size: 25px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  position: absolute;
+}
+.social__link:hover:before {
+  color: white;
+}
+
+.social__link_facebook:before {
+  content: "\f09a";
+  left: 20px;
+  top: 16px;
+}
+
+.social__link_linkedIn:before {
+  content: "\f0e1 ";
+  left: 17px;
+  top: 13px;
+}
+
+.social__link_github:before {
+  content: "\f113";
+  left: 16px;
+  top: 15px;
+}
+
+.site-header__logo {
+  width: 250px;
+  height: 250px;
+  margin: 0 auto 50px;
+}
+
+.logo_img {
+  width: 100%;
+  height: 100%;
+}
+
+.site-header__greeting {
+  width: 650px;
+  margin: 0 auto;
+  padding-bottom: 60px;
+}
+
+.greeting__h1,
+.greeting__h2 {
+  display: block;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.greeting__h1 {
+  font-family: 'OpenSans-Bold';
+  font-size: 60px;
+  text-transform: uppercase;
+  line-height: 50px;
+  padding-bottom: 30px;
+}
+
+.greeting__h2 {
+  font-family: 'OpenSans-Bold';
+  font-weight: 100;
+  font-size: 25px;
+  text-transform: uppercase;
+  line-height: 30px;
+  -moz-transform: matrix(1.25762, 0, 0, 1.25762, 0, 0);
+  -webkit-transform: matrix(1.25762, 0, 0, 1.25762, 0, 0);
+  -ms-transform: matrix(1.25762, 0, 0, 1.25762, 0, 0);
+}
+
+/*--------------------------------------------------------------
+Navigation
+--------------------------------------------------------------*/
+.site-header__navigation {
+  height: 60px;
+  background-color: green;
+  text-decoration: none;
+  font-size: 0;
+}
+
+.navigation__list {
+  margin: 0;
+  padding: 0;
+  text-align: justify;
+  height: 60px;
+}
+.navigation__list:after {
+  content: "";
+  display: inline-block;
+  height: 3px;
+  background-color: white;
+  width: 100%;
+}
+
+.navigation__item {
+  display: inline-block;
+  width: 166.66px;
+  position: relative;
+}
+.navigation__item:before {
+  content: "";
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  left: 0;
+  top: 27px;
+  width: 6px;
+  height: 6px;
+  text-align: center;
+}
+.navigation__item:first-child:before {
+  content: none;
+}
+
+.navigation__link {
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+  cursor: pointer;
+  min-height: 100%;
+  padding: 20 0;
+  color: #ffffff;
+  font-family: 'OpenSans-Bold';
+  font-size: 15px;
+  line-height: 17px;
+}
+.navigation__link:active {
+  color: lightblue;
+}
+.navigation__link:hover {
+  font-size: 16px;
+}
+
+.navigation__link_active {
+  color: #f2b3c9 !important;
+}
+.navigation__link_active:after {
+  content: "";
+  position: absolute;
+  left: 45%;
+  bottom: 0;
+  -webkit-border: 6px solid transparent;
+  -moz-border: 6px solid transparent;
+  -ms-border: 6px solid transparent;
+  -o-border: 6px solid transparent;
+  border: 6px solid transparent;
+  -webkit-border-bottom: 6px solid #ffffff;
+  -moz-border-bottom: 6px solid #ffffff;
+  -ms-border-bottom: 6px solid #ffffff;
+  -o-border-bottom: 6px solid #ffffff;
+  border-bottom: 6px solid #ffffff;
+}
+
+.sticky {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  border-top: 0;
+}

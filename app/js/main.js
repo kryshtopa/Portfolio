@@ -4,11 +4,14 @@ $(document).ready(function(){
   console.log("Hi! If yoy're interested in code, you can take a look at thit site's repository on github https://github.com/kryshtopa/Portfolio.git");
 
   contactForm.init();
-  lightbox.init();
-  colorSwitch.init();
-  fontSlider.init();
-  stickyNavBar.init();
-  gentleNav.init();
+
+  if ( $(window).width() > 999 ) {
+    lightbox.init();
+    colorSwitch.init();
+    fontSlider.init();
+    stickyNavBar.init();
+    gentleNav.init();
+  }
 
 });
 

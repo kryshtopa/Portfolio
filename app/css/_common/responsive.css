@@ -1,0 +1,78 @@
+@media screen and (max-width: 400px) {
+  /* --------- general --------- */
+  .wrapper {
+    min-width: 100%;
+  }
+
+  .container {
+    width: 95%;
+  }
+
+  .slide-in {
+    display: none;
+  }
+
+  .index__h2 {
+    padding: 30px 0 !important;
+    font-size: 2em !important;
+    letter-spacing: 0.2em !important;
+  }
+
+  /* --------- header --------- */
+  .site-header__social {
+    margin: 0 auto 25px;
+  }
+
+  .site-header__logo {
+    width: 200px !important;
+    height: 200px !important;
+    margin: 0 auto 25px !important;
+  }
+
+  .site-header__greeting {
+    width: 85% !important;
+    padding-bottom: 30px !important;
+  }
+
+  .greeting__h1 {
+    font-size: 2.5em !important;
+    padding-bottom: 30px !important;
+  }
+
+  .greeting__h2 {
+    font-size: 1.3em !important;
+  }
+
+  /* --------- navigation --------- */
+  .site-header__navigation {
+    display: none;
+  }
+
+  /* --------- about --------- */
+  .main-section__content,
+  .main-section__aside {
+    width: 100%;
+  }
+
+  .about__avatar {
+    margin-left: 0;
+    margin-top: 0;
+    margin: 10% auto;
+  }
+
+  .about__h2 {
+    padding-top: 0;
+  }
+
+  .about__text {
+    width: 95%;
+    margin: 0 auto;
+    margin-bottom: 1em;
+  }
+
+  /* --------- skills --------- */
+  /* --------- works --------- */
+  /* --------- price --------- */
+  /* --------- contacts --------- */
+  /* --------- footer --------- */
+}

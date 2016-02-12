@@ -39,6 +39,10 @@
   }
 
   /* --------- header --------- */
+  .site-header {
+    width: 100%;
+  }
+
   .container_header {
     position: absolute;
     top: 50%;
@@ -184,5 +188,25 @@
   /* --------- footer --------- */
   .site-footer {
     display: none;
+  }
+}
+@media screen and (max-device-width: 320px) {
+  .site-header {
+    max-width: 320px;
+  }
+
+  .container_header {
+    position: inherit;
+    left: 0;
+    top: 0;
+    transform: translate(0, 0);
+  }
+
+  .wrapper {
+    min-width: 320px;
+  }
+
+  .container {
+    width: 315px;
   }
 }

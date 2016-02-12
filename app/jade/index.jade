@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 html(lang="RU-ru")
   head
     <meta charset="UTF-8">
@@ -7,8 +8,8 @@ html(lang="RU-ru")
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dmitry Kryshtopa - Web Developer's portfolio</title>
     <!--SEO-->
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <meta name="description" content="Dmitry Kryshtopa's portfolio">
+    <meta name="keywords" content="frontend, web developer, portfolio">
     <meta name="author" content="Dmitry Kryshtopa">
     <!--favicon.ico-->
     <link rel="apple-touch-icon" sizes="57x57" href="images/icons/favicon/apple-touch-icon-57x57.png">
@@ -51,176 +52,189 @@ html(lang="RU-ru")
     <!-- endbower -->
     <!-- endbuild -->
     
-body
-  .wrapper
-    header.site-header#home
-      .container.container_header
-        .site-header__social
-          ul.social__list
-            each val, index in {facebook: "http://facebook.com/kryshtopa/", "linkedIn": "#", "github": "https://github.com/kryshtopa/"}
-              li.social__item
-                a.social__link(href="" + val class="social__link_" + index target="_blank")= index
-        .site-header__logo
-          img.logo_img(src="images/logo.png" alt="Dmitry Kryshtopa logo")
-        .site-header__greeting
-          h1.greeting__h1 Dmitry Kryshtopa
-          h2.greeting__h2 Web Developer's Portfolio
-    nav.site-header__navigation
-      ul.navigation__list
+  body
+    .wrapper
+      #home
+      header.site-header
+        .container.container_header
+          .site-header__social
+            ul.social__list
+              each val, index in {facebook: "http://facebook.com/kryshtopa/", "linkedIn": "http://me.linkedin.com/in/kryshtopa/", "github": "https://github.com/kryshtopa/"}
+                li.social__item
+                  a.social__link(href="" + val class="social__link_" + index target="_blank")= index
+          .site-header__logo
+            img.logo_img(src="images/logo.png" alt="Dmitry Kryshtopa logo")
+          .site-header__greeting
+            h1.greeting__h1 Dmitry Kryshtopa
+            h2.greeting__h2 Web Developer's Portfolio
+      nav.site-header__navigation
+        ul.navigation__list
+          .container
+            each val, index in {home: "Home", about: "About", skills: "Skills", works: "Works", price: "Pricing", contacts: "Contacts"}
+              li.navigation__item
+                a.navigation__link(href='#' + index)= val
+      
+      #about
+      section.main-section.main-section_about
         .container
-          each val, index in {home: "Home", about: "About", skills: "Skills", works: "Works", price: "Pricing", contacts: "Contacts"}
-            li.navigation__item
-              a.navigation__link(href='#' + index)= val
-    
-    #about
-    section.main-section.main-section_about
-      .container
-        .main-section__aside
-          .about__avatar  
-            img.avatar__img(src="images/avatar.png" alt="Dmitry Kryshtopa")
-        .main-section__content        
-          h2.index__h2.about__h2 About Me
-          p.about__text 30 years. Born and raised in Ukraine, and now living and working in Montenegro. Married.  Have a black dog.
-          p.about__text I’m working in the field of web development since 2010. In 2015 seriously improved my skills by passing Loftschool course of web development.
-          p.about__text By education I am a doctor, psychiatrist. It has nothing to do with my current kind of activity, but this information may be useful to you to understand my ability to learn, and my desire to engage in web development (it made me give up the case, for studying of which I’ve spent long eight years)
-          p.about__text Examples of my work can be seen below. If you are looking for a responsible and competent performer, you can fully rely on me. I would be happy to work with you on any challenge.
+          .main-section__aside
+            .about__avatar  
+              img.avatar__img(src="images/avatar.png" alt="Dmitry Kryshtopa")
+          .main-section__content        
+            h2.index__h2.about__h2 About Me
+            p.about__text 30 years. Born and raised in Ukraine, and now living and working in Montenegro. Married.  Have a black dog.
+            p.about__text I’m working in the field of web development since 2010. In 2015 seriously improved my skills by passing Loftschool course of web development.
+            p.about__text By education I am a doctor, psychiatrist. It has nothing to do with my current kind of activity, but this information may be useful to you to understand my ability to learn, and my desire to engage in web development (it made me give up the case, for studying of which I’ve spent long eight years)
+            p.about__text Examples of my work can be seen below. If you are looking for a responsible and competent performer, you can fully rely on me. I would be happy to work with you on any challenge.
 
-    #skills
-    section.main-section.main-section_skills
-      .container
-        .skills__container
-          ul.skills__list
-            each val, index in {"html5": "", "css3": "", "bem": "", "javascript": "", "jquery": "", "sass": "", "jade": "", "git": ""}
-              li.skills__item
-                .skills__icon(class="sprite-skills " + ((index == "html5") ? " sprite-skills-html" : "") + ((index == "css3") ? " sprite-skills-css" : "") + ((index == "bem") ? " sprite-skills-bem" : "") + ((index == "javascript") ? " sprite-skills-javascript" : "") + ((index == "jquery") ? " sprite-skills-jquery" : "") + ((index == "sass") ? " sprite-skills-sass" : "") + ((index == "jade") ? " sprite-skills-jade" : "") + ((index == "git") ? " sprite-skills-github" : ""))
-        .skills__copyright Icons by 
-          a.skills__copyright_link(href="http://jozefkrajcovic.sk" target="_blank") Jozef Krajcovic
+      #skills
+      section.main-section.main-section_skills
+        .container
+          .skills__container
+            ul.skills__list
+              each val, index in {"html5": "", "css3": "", "bem": "", "javascript": "", "jquery": "", "sass": "", "jade": "", "git": ""}
+                li.skills__item
+                  .skills__icon(class="sprite-skills " + ((index == "html5") ? " sprite-skills-html" : "") + ((index == "css3") ? " sprite-skills-css" : "") + ((index == "bem") ? " sprite-skills-bem" : "") + ((index == "javascript") ? " sprite-skills-javascript" : "") + ((index == "jquery") ? " sprite-skills-jquery" : "") + ((index == "sass") ? " sprite-skills-sass" : "") + ((index == "jade") ? " sprite-skills-jade" : "") + ((index == "git") ? " sprite-skills-github" : ""))
+          .skills__copyright Icons by 
+            a.skills__copyright_link(href="http://jozefkrajcovic.sk" target="_blank") Jozef Krajcovic
 
-    #works
-    section.main-section.main-section_works
-      .container
-        h2.index__h2.works__h2 Selected Works
-        .works__gallery
-          ul.works__list
-            li.works__item
-              a.works__link(href="#" data-lightbox="4" target="_blank")
-                img.works__img(src="images/preview/4.png")
-              a.works__link_git(href="https://github.com/kryshtopa/Portfolio.git" target="_blank") 
-              .works__h3 Portfolio
-              p.works__text Page you are watching at now. JS was used for changing the color scheme, the popup feedback form and pictures and changing the font size. Jade and Sass were used while working on layout. Github link is in a top left corner of an image above.
-            li.works__item
-              a.works__link(href="#" data-lightbox="3" target="_blank")
-                img.works__img(src="images/preview/3.png")
-              a.works__link_git(href="https://github.com/skaynetmen/watermark.git" target="_blank")
-              a.works__h3(href="http://wt.alskr.ru" target="_blank") Watermarks
-              p.works__text Website to add a watermark to your image. I participated as a member of the team of five people. I was responsible for writing the code of the part that made the positioning of the watermark in three different ways (grid, dragging and spinners). Github link is in a top left corner of an image above.
-            li.works__item
-              a.works__link(href="#" data-lightbox="2" target="_blank")
-                img.works__img(src="images/preview/2.png")
-              a.works__h3(href="http://hw2.kryshtopa.com/" target="_blank") Online Store
-              p.works__text There is one page of an online store. Made as part of the homework and just to show you what I can. Three variants of the representation of products, and a lot of JS in the sidebar.
-            li.works__item
-              a.works__link(href="#" data-lightbox="1" target="_blank") 
-                img.works__img(src="images/preview/1.png")
-              a.works__h3(href="http://hw1.kryshtopa.com/" target="_blank") Personal Site
-              p.works__text It looks simple, but performs all the necessary tasks. Strong layout and required JS. There is a form validation, popups, and 4 pages... What else may you need for a small personal site?
-      
-    #price          
-    section.main-section.main-section_price
-      .container
-        h2.index__h2.price__h2 Pricing
-        ul.price__list
-          li.price__item.price__item_s
-            h3.price__h3 Simple - 59$
-            .price__text A simple one-page website to tell about yourself in a few words. Possibility of adding the necessary effects through JS. Term - one day.
-            .price__text_dis Approximate price. It may vary depending on your specific wishes. Write me and we will discuss all the details.
-          li.price__item.price__item_o
-            h3.price__h3 Onepage - 149$
-            .price__text One-page site with several sections and a large amount of information. Such as this portfolio, for example. There is ability to add parallax effect and other details. Term - three days.
-            .price__text_dis Approximate price. It may vary depending on your specific wishes. Write me and we will discuss all the details.
-          li.price__item.price__item_b
-            h3.price__h3 Business - 299$
-            .price__text A site with multiple pages with a different layout and functions. Adding the required functionality through JS. Term - one week.
-            .price__text_dis Approximate price. It may vary depending on your specific wishes. Write me and we will discuss all the details.
+      #works
+      section.main-section.main-section_works
+        .container
+          h2.index__h2.works__h2 Selected Works
+          .works__gallery
+            ul.works__list
+              li.works__item
+                a.works__link(href="#" data-lightbox="6" target="_blank")
+                  img.works__img(src="images/preview/6.png" alt="Potfolio preview image")
+                a.works__link_git(href="https://github.com/kryshtopa/MonteRules.git" target="_blank") 
+                a.works__h3(href="http://monterules.kryshtopa.com" target="_blank") Monte Rules
+                p.works__text A single-page website which lets user to add a text line to his image. Picture file doesn't save on server, but may be saved directly to a user's PC.
+              li.works__item
+                a.works__link(href="#" data-lightbox="5" target="_blank")
+                  img.works__img(src="images/preview/5.png" alt="Potfolio preview image")
+                a.works__link_git(href="https://github.com/kryshtopa/WP-Landing.git" target="_blank") 
+                a.works__h3(href="http://wp-landing.kryshtopa.com" target="_blank") Wordpress Landing Page
+                p.works__text An example how a HTML landing page may be launched on Wordpress. This way user may edit content without changing the code.
+              li.works__item
+                a.works__link(href="#" data-lightbox="4" target="_blank")
+                  img.works__img(src="images/preview/4.png" alt="Potfolio preview image")
+                a.works__link_git(href="https://github.com/kryshtopa/Portfolio.git" target="_blank") 
+                .works__h3 Portfolio
+                p.works__text Page you are watching at now. JS was used for changing the color scheme, the popup feedback form and pictures and changing the font size. Jade and Sass were used while working on layout. Github link is in a top left corner of an image above.
+              li.works__item
+                a.works__link(href="#" data-lightbox="3" target="_blank")
+                  img.works__img(src="images/preview/3.png" alt="Potfolio preview image")
+                a.works__link_git(href="https://github.com/skaynetmen/watermark.git" target="_blank")
+                a.works__h3(href="http://wt.alskr.ru" target="_blank") Watermarks
+                p.works__text Website to add a watermark to your image. I participated as a member of the team of five people. I was responsible for writing the code of the part that made the positioning of the watermark in three different ways (grid, dragging and spinners). Github link is in a top left corner of an image above.
+              li.works__item
+                a.works__link(href="#" data-lightbox="2" target="_blank")
+                  img.works__img(src="images/preview/2.png" alt="Potfolio preview image")
+                a.works__h3(href="http://hw2.kryshtopa.com/" target="_blank") Online Store
+                p.works__text There is one page of an online store. Made as part of the homework and just to show you what I can. Three variants of the representation of products, and a lot of JS in the sidebar.
+              li.works__item
+                a.works__link(href="#" data-lightbox="1" target="_blank") 
+                  img.works__img(src="images/preview/1.png" alt="Potfolio preview image")
+                a.works__h3(href="http://hw1.kryshtopa.com/" target="_blank") Personal Site
+                p.works__text It looks simple, but performs all the necessary tasks. Strong layout and required JS. There is a form validation, popups, and 4 pages... What else may you need for a small personal site?
+        
+      #price          
+      section.main-section.main-section_price
+        .container
+          h2.index__h2.price__h2 Pricing
+          ul.price__list
+            li.price__item.price__item_s
+              h3.price__h3 Simple - 59$
+              .price__text A simple one-page website to tell about yourself in a few words. Possibility of adding the necessary effects through JS. Term - one day.
+              .price__text_dis Approximate price. It may vary depending on your specific wishes. Write me and we will discuss all the details.
+            li.price__item.price__item_o
+              h3.price__h3 Onepage - 149$
+              .price__text One-page site with several sections and a large amount of information. Such as this portfolio, for example. There is ability to add parallax effect and other details. Term - three days.
+              .price__text_dis Approximate price. It may vary depending on your specific wishes. Write me and we will discuss all the details.
+            li.price__item.price__item_b
+              h3.price__h3 Business - 299$
+              .price__text A site with multiple pages with a different layout and functions. Adding the required functionality through JS. Term - one week.
+              .price__text_dis Approximate price. It may vary depending on your specific wishes. Write me and we will discuss all the details.
+            
+      #contacts  
+      section.main-section.main-section_contacts
+        .container
+          h2.index__h2.how-to-get__h2 Contacts
+          p.index__text Please feel free to contact me on any ocasion. I'll try to answer your question as soon as possible. Contact form, that you can see below, sends e-mails to the same address that is shown in E-Mail field, so if you don't need to attach any file to your letter, that could be the most convinient way for you.
+          .site-header__social.contacts__social
+            ul.social__list
+              each val, index in {facebook: "http://facebook.com/kryshtopa/", "linkedIn": "#", "github": "https://github.com/kryshtopa/"}
+                li.social__item
+                  a.social__link(href="" + val class="social__link_" + index target="_blank")= index
+          .main-section__aside
+            address.contacts__content
+              ul.contacts__list
+                li.contacts__item
+                  .contacts__h3 Phone
+                  a.contacts__phone(href="tel:+38269679550") +382-69-679550
+                li.contacts__item
+                  .contacts__h3 Viber
+                  a.contacts__phone(href="viber:+380967895929") +380-96-7895929
+                li.contacts__item
+                  .contacts__h3 Skype
+                  a.contacts__skype(href="skype:krysht0pa") krysht0pa
+                li.contacts__item
+                  .contacts__h3 E-mail
+                  a.contacts__mail(href="mailto:mail@kryshtopa") mail@kryshtopa.com
+          .main-section__content
+            .contacts__contact-form#contact-form
+              h3.contact-form__h3 Write me a message
+              form.contact-form#form
+                input#from.contact-form__input.contact-form__input_name(placeholder="Your name")
+                input#email.contact-form__input.contact-form__input_phone(placeholder="Your E-Mail")
+                textarea#content.contact-form__text(placeholder="Your message")
+                button#send.contact-form__button(type="submit") Send
+                .contact-form__alert#alert
           
-    #contacts  
-    section.main-section.main-section_contacts
-      .container
-        h2.index__h2.how-to-get__h2 Contacts
-        p.index__text Please feel free to contact me on any ocasion. I'll try to answer your question as soon as possible. Contact form, that you can see below, sends e-mails to the same address that is shown in E-Mail field, so if you don't need to attach any file to your letter, that could be the most convinient way for you.
-        .site-header__social.contacts__social
-          ul.social__list
-            each val, index in {facebook: "http://facebook.com/kryshtopa/", "linkedIn": "#", "github": "https://github.com/kryshtopa/"}
-              li.social__item
-                a.social__link(href="" + val class="social__link_" + index target="_blank")= index
-        .main-section__aside
-          address.contacts__content
-            ul.contacts__list
-              li.contacts__item
-                h3.contacts__h3 Phone
-                a.contacts__phone(href="tel:+38269679550") +382-69-679550
-              li.contacts__item
-                h3.contacts__h3 Viber
-                a.contacts__phone(href="viber:+380967895929") +380-96-7895929
-              li.contacts__item
-                h3.contacts__h3 Skype
-                a.contacts__skype(href="skype:krysht0pa") krysht0pa
-              li.contacts__item
-                h3.contacts__h3 E-mail
-                a.contacts__mail(href="mailto:mail@kryshtopa") mail@kryshtopa.com
-        .main-section__content
-          .contacts__contact-form#contact-form
-            h3.contact-form__h3 Write me a message
-            form.contact-form#form
-              input#from.contact-form__input.contact-form__input_name(x-autocompletetype="name" placeholder="Your name")
-              input#email.contact-form__input.contact-form__input_phone(x-autocompletetype="email" placeholder="Your E-Mail")
-              textarea#content.contact-form__text(placeholder="Your message")
-              button#send.contact-form__button(type="submit") Send
-              .contact-form__alert#alert
-        
-    .contacts__contact-form.contacts__contact-form_popup#contact-form
-      h3.contact-form__h3 Write me a message
-      form.contact-form#form
-        input#from2.contact-form__input.contact-form__input_name(x-autocompletetype="name" placeholder="Your name")
-        input#email2.contact-form__input.contact-form__input_phone(x-autocompletetype="email" placeholder="Your E-Mail")
-        textarea#content2.contact-form__text(placeholder="Your message")
-        button#send2.contact-form__button(type="submit") Send
-        .contact-form__alert#alert2
-    
-    .slide-in.slide-in_message
-      a.slide-in__content.slide-in__content_message send me a message
-    .slide-in.slide-in_colors
-      .slide-in__content.slide-in__content_colors
-        ul.color-switch__list
-          -var colors = ["orange", "lightblue", "black"]
-          each color in colors
-            li.color-switch__item(class="color-switch__item_" + color + ((color == "lightblue") ? " active" : "") style="background-color:" + color)
-    .slide-in.slide-in_text-size
-      .slide-in__slider#slider
-      a.slide-in__content.slide-in__content_text-size
+      .contacts__contact-form.contacts__contact-form_popup#contact-form2
+        h3.contact-form__h3 Write me a message
+        form.contact-form#form2
+          input#from2.contact-form__input.contact-form__input_name(placeholder="Your name")
+          input#email2.contact-form__input.contact-form__input_phone(placeholder="Your E-Mail")
+          textarea#content2.contact-form__text(placeholder="Your message")
+          button#send2.contact-form__button(type="submit") Send
+          .contact-form__alert#alert2
+      
+      .slide-in.slide-in_message
+        a.slide-in__content.slide-in__content_message send me a message
+      .slide-in.slide-in_colors
+        .slide-in__content.slide-in__content_colors
+          ul.color-switch__list
+            -var colors = ["orange", "lightblue", "black"]
+            each color in colors
+              li.color-switch__item(class="color-switch__item_" + color + ((color == "lightblue") ? " active" : "") style="background-color:" + color)
+      .slide-in.slide-in_text-size
+        .slide-in__slider#slider
+        a.slide-in__content.slide-in__content_text-size
 
-  footer.site-footer
-    .container
-      p.site-footer__copyright © 2016 | 
-        a.site-footer__link(href='http://kryshtopa.com', target="_blank") Dmitry Kryshtopa
-        
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-      <script>window.jQuery || document.write('<script src="bower/jquery/dist/jquery.js"><\/script>');
-      </script>
-      <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-      
-      <!-- build:js js/vendor.min.js -->            
-      <!-- bower:js -->
-      <script src="bower/jquery/dist/jquery.js"></script>
-      <script src="bower/lightbox2/dist/js/lightbox.js"></script>
-      <script src="bower/bPopup/jquery.bpopup.js"></script>
-      <script src="bower/jquery-ui/jquery-ui.min.js"></script>
-      <script src="bower/jquery-ui/ui/slider.js"></script>
-      <script src="bower/jQuery-ui-Slider-Pips/dist/jquery-ui-slider-pips.min.js"></script>
-      <!-- endbower -->
-      <!-- endbuild -->
-      
-      <!-- build:js js/main.min.js -->
-      <script src="js/main.js"></script>
-      <script src="js/contact.js"></script>
-      <!-- endbuild -->
+    footer.site-footer
+      .container
+        p.site-footer__copyright © 2016 | 
+          a.site-footer__link(href='http://kryshtopa.com', target="_blank") Dmitry Kryshtopa
+          
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="bower/jquery/dist/jquery.js"><\/script>');
+    </script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    
+    <!-- build:js js/vendor.min.js -->            
+    <!-- bower:js -->
+    <script src="bower/jquery/dist/jquery.js"></script>
+    <script src="bower/lightbox2/dist/js/lightbox.js"></script>
+    <script src="bower/bPopup/jquery.bpopup.js"></script>
+    <script src="bower/jquery-ui/jquery-ui.min.js"></script>
+    <script src="bower/jquery-ui/ui/slider.js"></script>
+    <script src="bower/jQuery-ui-Slider-Pips/dist/jquery-ui-slider-pips.min.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    
+    <!-- build:js js/main.min.js -->
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+    <!-- endbuild -->

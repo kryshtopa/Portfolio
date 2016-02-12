@@ -1,3 +1,5 @@
+@import "_common/mixins.scss";
+
 * {
   box-sizing: border-box;
 }
@@ -15,7 +17,7 @@ html, body, {
 }
 .contacts__contact-form_popup {
   display: none;
-  padding: 20px 20px 0;
+  padding: 20px;
   background-color: #ffffff;
   width: 706px !important;
   @include prefix (border-radius, 3px);

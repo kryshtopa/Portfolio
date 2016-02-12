@@ -9,9 +9,9 @@ $(document).ready(function(){
     lightbox.init();
     colorSwitch.init();
     fontSlider.init();
-    stickyNavBar.init();
-    gentleNav.init();
   }
+  stickyNavBar.init();
+  gentleNav.init();
 
 });
 
@@ -147,15 +147,15 @@ var stickyNavBar = (function() {
     var stickyNavTop = $('.site-header__navigation').offset().top;
 
     var stickyNav = function(){
-    var scrollTop = $(window).scrollTop();
+      var scrollTop = $(window).scrollTop();
 
-    if (scrollTop > stickyNavTop) {
-        $('.site-header__navigation').addClass('sticky');
-        $('.slide-in_message').css({"top": "88px"});
-    } else {
-        $('.site-header__navigation').removeClass('sticky');
-        $('.slide-in_message').css({"top": "25px"})
-    }
+      if (scrollTop > stickyNavTop) {
+          $('.site-header__navigation').addClass('sticky');
+          $('.slide-in_message').css({"top": "88px"});
+      } else {
+          $('.site-header__navigation').removeClass('sticky');
+          $('.slide-in_message').css({"top": "25px"})
+      }
     };
 
     $(window).scroll(function() {
@@ -179,7 +179,7 @@ var gentleNav = (function() {
 
       var target = $(this).attr("href");
 
-      $('html, body').stop().animate({ scrollTop: $(target).offset().top-60}, 700, function() {
+      $('html, body').stop().animate({ scrollTop: $(target).offset().top}, 700, function() {
         location.hash = target;
       });
 
